@@ -6,7 +6,7 @@ import '../../css/Hero.css';
 // const HERO_PORTRAIT =
 //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlf_NjOJjCT_qv5wweFeqW9AA8fwZ_PO_kKQ&s';
 const HERO_PORTRAIT =
-  'Gemini_Generated_Image_5gv47k5gv47k5gv4.png';
+  'https://kommodo.ai/i/PBp7Kln6VFehUWYoctV9';
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('');
