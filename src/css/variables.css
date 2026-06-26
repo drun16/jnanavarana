@@ -1,0 +1,78 @@
+/* Theme variables — Royal Blue / Gold / White with premium dark variant */
+:root,
+[data-theme="light"] {
+  --color-royal: #1a237e;
+  --color-royal-light: #283593;
+  --color-royal-dark: #0d1642;
+  --color-gold: #c9a227;
+  --color-gold-light: #e8c547;
+  --color-gold-dark: #9a7b1a;
+  --color-white: #ffffff;
+  --color-off-white: #f8f9fc;
+  --color-cream: #faf8f3;
+  --color-text: #1a1a2e;
+  --color-text-muted: #4a4a6a;
+  --color-text-light: #6b6b8a;
+  --color-border: rgba(26, 35, 126, 0.12);
+  --color-glass: rgba(255, 255, 255, 0.72);
+  --color-glass-border: rgba(255, 255, 255, 0.35);
+  --color-shadow: rgba(26, 35, 126, 0.08);
+  --color-shadow-strong: rgba(26, 35, 126, 0.18);
+  --color-overlay: rgba(26, 35, 126, 0.85);
+  --gradient-hero: linear-gradient(135deg, #0d1642 0%, #1a237e 40%, #283593 70%, #1a237e 100%);
+  --gradient-gold: linear-gradient(135deg, #c9a227 0%, #e8c547 50%, #c9a227 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 252, 0.9));
+  --gradient-section: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-cream) 100%);
+  --navbar-bg: rgba(255, 255, 255, 0.75);
+  --navbar-scrolled: rgba(255, 255, 255, 0.88);
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --section-alt: #f0f2f8;
+  --focus-ring: 0 0 0 3px rgba(201, 162, 39, 0.45);
+}
+
+[data-theme="dark"] {
+  --color-royal: #5c6bc0;
+  --color-royal-light: #7986cb;
+  --color-royal-dark: #0a0e1f;
+  --color-gold: #d4af37;
+  --color-gold-light: #f0d060;
+  --color-gold-dark: #b8962e;
+  --color-white: #e8eaf6;
+  --color-off-white: #0f1225;
+  --color-cream: #12162b;
+  --color-text: #e8eaf6;
+  --color-text-muted: #a8adc4;
+  --color-text-light: #7b82a0;
+  --color-border: rgba(92, 107, 192, 0.2);
+  --color-glass: rgba(15, 18, 37, 0.78);
+  --color-glass-border: rgba(92, 107, 192, 0.25);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-strong: rgba(0, 0, 0, 0.5);
+  --color-overlay: rgba(10, 14, 31, 0.92);
+  --gradient-hero: linear-gradient(135deg, #060810 0%, #0f1225 30%, #1a237e 60%, #0a0e1f 100%);
+  --gradient-gold: linear-gradient(135deg, #b8962e 0%, #d4af37 50%, #b8962e 100%);
+  --gradient-card: linear-gradient(145deg, rgba(22, 27, 48, 0.95), rgba(15, 18, 37, 0.9));
+  --gradient-section: linear-gradient(180deg, #0f1225 0%, #12162b 100%);
+  --navbar-bg: rgba(15, 18, 37, 0.75);
+  --navbar-scrolled: rgba(15, 18, 37, 0.92);
+  --card-bg: rgba(22, 27, 48, 0.88);
+  --section-alt: #161b30;
+  --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.4);
+}
+
+/* Shared design tokens */
+:root {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --navbar-height: 72px;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+}

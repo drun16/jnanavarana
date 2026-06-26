@@ -1,0 +1,141 @@
+.constitution {
+  background: var(--gradient-section);
+}
+
+.constitution__infographic {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.constitution__center {
+  position: sticky;
+  top: calc(var(--navbar-height) + 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.constitution__center-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(201, 162, 39, 0.3);
+}
+
+.constitution__center-ring--outer {
+  width: 280px;
+  height: 280px;
+  animation: constitutionRotate 30s linear infinite;
+}
+
+.constitution__center-ring--inner {
+  width: 220px;
+  height: 220px;
+  border-style: dashed;
+  animation: constitutionRotate 20s linear infinite reverse;
+}
+
+.constitution__center-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: var(--card-bg);
+  border: 2px solid rgba(201, 162, 39, 0.4);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 15px 50px var(--color-shadow-strong);
+}
+
+.constitution__center-icon {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.constitution__center-title {
+  font-size: 0.85rem;
+  color: var(--color-royal);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .constitution__center-title {
+  color: var(--color-white);
+}
+
+.constitution__center-text {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.constitution__center-date {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-top: 0.25rem;
+}
+
+.constitution__pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.constitution__pillar {
+  background: var(--card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
+}
+
+.constitution__pillar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px var(--color-shadow-strong);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.constitution__pillar-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.constitution__pillar-title {
+  font-size: 1.05rem;
+  color: var(--color-royal);
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .constitution__pillar-title {
+  color: var(--color-white);
+}
+
+.constitution__pillar-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+@keyframes constitutionRotate {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .constitution__infographic {
+    grid-template-columns: 1fr;
+  }
+
+  .constitution__center {
+    position: relative;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+}

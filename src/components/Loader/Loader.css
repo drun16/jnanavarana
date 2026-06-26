@@ -1,0 +1,95 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader--fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader__inner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loader__emblem {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: var(--color-gold);
+  border-right-color: var(--color-gold-light);
+  border-radius: 50%;
+  animation: loaderSpin 1.2s linear infinite;
+}
+
+.loader__initials {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+}
+
+.loader__title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  animation: loaderFadeIn 0.8s ease forwards;
+}
+
+.loader__subtitle {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  animation: loaderFadeIn 0.8s ease 0.3s forwards;
+  opacity: 0;
+}
+
+.loader__bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.loader__bar-fill {
+  height: 100%;
+  background: var(--gradient-gold);
+  border-radius: 2px;
+  animation: loaderProgress 2s ease forwards;
+}
+
+@keyframes loaderSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loaderFadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes loaderProgress {
+  from { width: 0; }
+  to { width: 100%; }
+}
