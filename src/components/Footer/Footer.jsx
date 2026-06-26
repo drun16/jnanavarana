@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../css/Footer.css';
 
 const usefulLinks = [
@@ -60,6 +61,13 @@ export default function Footer() {
               The Life, Legacy and Vision of Bharat Ratna Dr. B. R. Ambedkar
             </p>
             <p className="footer__purpose">Created for Educational Purpose</p>
+            
+            {/* Added Address Block */}
+            <address className="footer__address" style={{ fontStyle: 'normal', marginTop: '1.5rem', opacity: 0.9, lineHeight: '1.6' }}>
+              <strong>Venue:</strong><br />
+              Government Medical and Engineering Hostel,<br />
+              Bogadi, Mysore
+            </address>
           </div>
 
           <div className="footer__links">
@@ -100,7 +108,7 @@ export default function Footer() {
           </p>
           <button className="footer__back-to-top" onClick={scrollToTop}>
             Back to Top
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" style={{ marginLeft: '8px' }}>
               <path d="M12 19V5M5 12l7-7 7 7" />
             </svg>
           </button>

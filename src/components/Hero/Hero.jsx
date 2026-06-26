@@ -3,8 +3,10 @@ import '../../css/Hero.css';
 
 // const HERO_PORTRAIT =
 //   'https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg';
+// const HERO_PORTRAIT =
+//   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlf_NjOJjCT_qv5wweFeqW9AA8fwZ_PO_kKQ&s';
 const HERO_PORTRAIT =
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlf_NjOJjCT_qv5wweFeqW9AA8fwZ_PO_kKQ&s';
+  'Gemini_Generated_Image_5gv47k5gv47k5gv4.png';
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('');
@@ -41,7 +43,7 @@ export default function Hero() {
 
       <div className="hero__container">
         <div className="hero__content">
-          <p className="hero__eyebrow">Educational Exhibition</p>
+          <p className="hero__eyebrow">Government Medical & Engineering Hostel, Bogadi Mysore </p>
           <h1 className="hero__title">
             Jnanavarana <span className="hero__title-year">2026</span>
           </h1>
