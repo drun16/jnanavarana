@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import '../../css/Hero.css';
 
+// const HERO_PORTRAIT =
+//   'https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg';
 const HERO_PORTRAIT =
-  'https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg';
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlf_NjOJjCT_qv5wweFeqW9AA8fwZ_PO_kKQ&s';
 
 export default function Hero() {
   const [typedText, setTypedText] = useState('');
