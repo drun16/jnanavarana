@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import '../../css/Gallery.css';
 
 export default function GalleryItem({ item, onClick }) {
   const [ref, isVisible] = useIntersectionObserver();
+  const [imgSrc, setImgSrc] = useState(item.image);
+
+  useEffect(() => {
+    setImgSrc(item.image);
+  }, [item.image]);
+
+  const handleImgError = () => {
+    if (item.fullImage && imgSrc !== item.fullImage) {
+      setImgSrc(item.fullImage);
+    }
+  };
 
   return (
     <article
@@ -16,12 +28,14 @@ export default function GalleryItem({ item, onClick }) {
     >
       <div className="gallery-item__image-wrapper">
         <img
-          src={item.image}
+          src={imgSrc}
           alt={item.alt}
           className="gallery-item__image"
           loading="lazy"
-          width={440}
-          height={330}
+          decoding="async"
+          onError={handleImgError}
+          width={500}
+          height={375}
         />
         <div className="gallery-item__overlay">
           <span className="gallery-item__year">{item.year}</span>

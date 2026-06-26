@@ -3,7 +3,8 @@
  * All image URLs verified via Wikimedia Commons API (public domain / CC0).
  */
 
-function getThumbUrl(fullUrl, width = 440) {
+/** Wikimedia only serves whitelisted thumb widths (440px returns 400). */
+function getThumbUrl(fullUrl, width = 500) {
   const marker = '/wikipedia/commons/';
   const idx = fullUrl.indexOf(marker);
   if (idx === -1) return fullUrl;
