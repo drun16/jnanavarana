@@ -4,8 +4,8 @@ const STORAGE_KEY = 'jnanavarana-theme';
 
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'light';
-    return localStorage.getItem(STORAGE_KEY) || 'light';
+    if (typeof window === 'undefined') return 'dark';
+    return localStorage.getItem(STORAGE_KEY) || 'dark';
   });
 
   useEffect(() => {
